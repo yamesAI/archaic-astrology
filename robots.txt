@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://archaic-astrology.com/sitemap.xml
+
+# Disallow utility pages from indexing
+Disallow: /success.html
+Disallow: /cancel.html
+
+# Allow all other content
+Allow: /index.html
+Allow: /services.html
+Allow: /about.html
+Allow: /blog.html
+Allow: /booking.html
+Allow: /ai-readings.html
+Allow: /starluck.html
+Allow: /wedding.html
+Allow: /gardening.html
+Allow: /saturn-return-calculator.html
