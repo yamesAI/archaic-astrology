@@ -1,0 +1,356 @@
+/* ========================================
+   AI READINGS - Economical Tier Styles
+   ======================================== */
+
+/* Hero Section */
+.ai-hero {
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-dark) 100%);
+    padding: calc(var(--space-2xl) + 60px) 0 var(--space-2xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-hero::before {
+    content: '⚡';
+    position: absolute;
+    font-size: 400px;
+    opacity: 0.03;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.ai-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.ai-badge {
+    display: inline-block;
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 20px;
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.5px;
+}
+
+.ai-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+    line-height: 1.2;
+}
+
+.ai-hero .lead {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-sm);
+}
+
+.ai-hero .sub-lead {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+/* Reading Types Grid */
+.reading-types {
+    padding: var(--space-2xl) 0;
+    background: var(--color-bg-card);
+}
+
+.readings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.reading-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.reading-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(139, 69, 19, 0.1);
+}
+
+.reading-card.featured {
+    border-color: var(--color-accent);
+    background: linear-gradient(135deg, var(--color-bg) 0%, rgba(212, 175, 55, 0.05) 100%);
+}
+
+.reading-card.featured .badge {
+    position: absolute;
+    top: -10px;
+    right: var(--space-md);
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.reading-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+}
+
+.reading-icon {
+    font-size: 2rem;
+}
+
+.reading-price {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.reading-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+}
+
+.reading-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-md);
+    flex-grow: 1;
+}
+
+.reading-features {
+    list-style: none;
+    margin-bottom: var(--space-md);
+}
+
+.reading-features li {
+    padding: 6px 0;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.reading-features li:last-child {
+    border-bottom: none;
+}
+
+.reading-card .btn {
+    margin-top: auto;
+    width: 100%;
+}
+
+/* How It Works */
+.how-it-works {
+    padding: var(--space-2xl) 0;
+    background: var(--color-bg-dark);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -var(--space-lg);
+    top: 30px;
+    font-size: 1.5rem;
+    color: var(--color-border-dark);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 50%;
+    margin-bottom: var(--space-sm);
+}
+
+.step h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-xs);
+}
+
+.step p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+/* Compare Tier */
+.compare-tier {
+    padding: var(--space-2xl) 0;
+    background: var(--color-bg);
+}
+
+.compare-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.compare-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+}
+
+.compare-content > p {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-xl);
+}
+
+.compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    text-align: left;
+}
+
+.compare-column {
+    background: var(--color-bg-card);
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    position: relative;
+}
+
+.compare-column.premium {
+    border-color: var(--color-accent);
+    background: linear-gradient(135deg, var(--color-bg-card) 0%, rgba(212, 175, 55, 0.05) 100%);
+}
+
+.compare-column h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+}
+
+.compare-column ul {
+    list-style: none;
+    margin-bottom: var(--space-md);
+}
+
+.compare-column li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+}
+
+.tier-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 24, 16, 0.8);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--color-bg-card);
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: var(--space-xl);
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+}
+
+.modal-close:hover {
+    color: var(--color-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .step:not(:last-child)::after {
+        display: none;
+    }
+    
+    .compare-grid {
+        grid-template-columns: 1fr;
+    }
+}

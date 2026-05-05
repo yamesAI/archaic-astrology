@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Gardening | Lunar Planting Calendar & Garden Astrology</title>
+    <meta name="description" content="Astrological gardening guidance. Lunar planting calendars, harvest timing, and companion planting based on your birth chart. Garden by the moon and stars.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gardening.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="gardening-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">☿</span>
+                <span class="logo-text">Archaic Astrology</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ai-readings.html">AI Readings</a></li>
+                <li><a href="starluck.html">✦ StarLuck</a></li>
+                <li><a href="wedding.html">💍 Wedding</a></li>
+                <li><a href="gardening.html" class="active">🌱 Garden</a></li>
+                <li><a href="booking.html" class="btn-nav">Book Reading</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gardening-hero">
+        <div class="hero-leaves"></div>
+        <div class="container">
+            <div class="gardening-hero-content">
+                <span class="gardening-badge">🌙 Garden by the Moon</span>
+                <h1>Sow with the Stars.<br><span class="accent">Reap in Harmony.</span></h1>
+                <p class="lead">Ancient agricultural astrology for modern gardens. Lunar planting calendars, harvest timing, and personalized guidance based on your birth chart's relationship to earth and growth.</p>
+                <div class="hero-cta">
+                    <a href="#calendar" class="btn btn-primary btn-large">Get Planting Calendar</a>
+                    <a href="#services" class="btn btn-outline btn-large">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="gardening-philosophy">
+        <div class="container">
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <h2>The Ancient Wisdom</h2>
+                    <p>For thousands of years, farmers planted by the moon. The waxing moon draws sap upward—perfect for above-ground crops. The waning moon sends energy to roots—ideal for tubers and bulbs.</p>
+                    <p>Each zodiac sign rules a part of the plant: Aries the seeds, Taurus the roots, Gemini the flowers. Planting when the moon is in the right sign for your crop is the secret to abundant harvests.</p>
+                </div>
+                <div class="moon-phases-diagram">
+                    <div class="phase">
+                        <span class="phase-icon">🌑</span>
+                        <span class="phase-name">New</span>
+                        <span class="phase-action">Plan & Prepare</span>
+                    </div>
+                    <div class="phase">
+                        <span class="phase-icon">🌓</span>
+                        <span class="phase-name">1st Quarter</span>
+                        <span class="phase-action">Plant Above</span>
+                    </div>
+                    <div class="phase">
+                        <span class="phase-icon">🌕</span>
+                        <span class="phase-name">Full</span>
+                        <span class="phase-action">Harvest</span>
+                    </div>
+                    <div class="phase">
+                        <span class="phase-icon">🌗</span>
+                        <span class="phase-name">Last Quarter</span>
+                        <span class="phase-action">Plant Roots</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="gardening-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Astro Gardening Services</h2>
+                <p>Personalized guidance for growing in harmony with the cosmos</p>
+            </div>
+            
+            <div class="gardening-grid">
+                <!-- Monthly Planting Calendar -->
+                <div class="gardening-card featured">
+                    <div class="gardening-card-header">
+                        <span class="card-icon">🗓️</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Monthly</span>
+                            <span class="card-price">$19<span>/month</span></span>
+                        </div>
+                    </div>
+                    <h3>Lunar Planting Calendar</h3>
+                    <p>Your personalized monthly calendar showing the best days for planting, harvesting, pruning, and garden tasks. Based on moon phases and zodiac signs.</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ Daily planting recommendations</li>
+                            <li>✓ Moon phases & signs</li>
+                            <li>✓ Favorable/barren day markers</li>
+                            <li>✓ Best crops for each day</li>
+                            <li>✓ Harvest timing guidance</li>
+                            <li>✓ Pruning & cultivation days</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-full" onclick="openGardeningModal('planting-calendar')">
+                        Get My Calendar
+                    </button>
+                </div>
+
+                <!-- Harvest Election -->
+                <div class="gardening-card">
+                    <div class="gardening-card-header">
+                        <span class="card-icon">🌾</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Per Season</span>
+                            <span class="card-price">$15</span>
+                        </div>
+                    </div>
+                    <h3>Harvest Election</h3>
+                    <p>Find the optimal time to harvest your crops for maximum potency, flavor, and storage life. Different rules for immediate use vs. long-term storage.</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ Best harvest dates for 2 weeks</li>
+                            <li>✓ Storage vs. immediate use timing</li>
+                            <li>✓ Medicinal potency windows</li>
+                            <li>✓ Seed saving dates</li>
+                            <li>✓ Written timing report</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn btn-secondary btn-full" onclick="openGardeningModal('harvest-election')">
+                        Find Harvest Dates
+                    </button>
+                </div>
+
+                <!-- Garden Moon Guide -->
+                <div class="gardening-card">
+                    <div class="gardening-card-header">
+                        <span class="card-icon">🌙</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Personalized</span>
+                            <span class="card-price">$25</span>
+                        </div>
+                    </div>
+                    <h3>Personal Garden Moon Guide</h3>
+                    <p>A personalized lunar calendar based on YOUR birth chart. Shows how moon phases interact with your specific chart for gardening success.</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ Your elemental gardening style</li>
+                            <li>✓ Lucky plants for your chart</li>
+                            <li>✓ Best gardening days for YOU</li>
+                            <li>✓ Monthly moon phase guidance</li>
+                            <li>✓ 20-page personalized guide</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn btn-secondary btn-full" onclick="openGardeningModal('moon-guide')">
+                        Get My Guide
+                    </button>
+                </div>
+
+                <!-- Companion Planting -->
+                <div class="gardening-card">
+                    <div class="gardening-card-header">
+                        <span class="card-icon">🌿</span>
+                        <div class="card-meta">
+                            <span class="card-tag">One-Time</span>
+                            <span class="card-price">$12</span>
+                        </div>
+                    </div>
+                    <h3>Companion Planting by Sign</h3>
+                    <p>Which plants thrive together? Based on astrological sympathy—plants sharing friendly signs support each other's growth. Avoid conflict combinations.</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ Plant pairs by zodiac harmony</li>
+                            <li>✓ Compatible combinations</li>
+                            <li>✓ Conflicts to avoid</li>
+                            <li>✓ Element-based groupings</li>
+                            <li>✓ 10-page reference guide</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn btn-secondary btn-full" onclick="openGardeningModal('companion')">
+                        Get Planting Guide
+                    </button>
+                </div>
+
+                <!-- Seasonal Planning -->
+                <div class="gardening-card">
+                    <div class="gardening-card-header">
+                        <span class="card-icon">🌸</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Quarterly</span>
+                            <span class="card-price">$35<span>/quarter</span></span>
+                        </div>
+                    </div>
+                    <h3>Seasonal Garden Plan</h3>
+                    <p>Complete astrological planting plan for the season. What to plant when, when to expect harvests, and key dates for each crop in your garden.</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ 3-month planting schedule</li>
+                            <li>✓ Crop-specific timing</li>
+                            <li>✓ Succession planting dates</li>
+                            <li>✓ Harvest predictions</li>
+                            <li>✓ Email reminders for key dates</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn btn-secondary btn-full" onclick="openGardeningModal('seasonal')">
+                        Plan My Season
+                    </button>
+                </div>
+
+                <!-- Consultation -->
+                <div class="gardening-card premium-card">
+                    <div class="gardening-card-header">
+                        <span class="card-icon">👑</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Consultation</span>
+                            <span class="card-price">$150</span>
+                        </div>
+                    </div>
+                    <h3>Garden Design Consultation</h3>
+                    <p>1-on-1 consultation for designing your garden using astrological principles. Layout, plant selection, and timing—all aligned with your chart.</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ 60-minute video consultation</li>
+                            <li>✓ Garden layout recommendations</li>
+                            <li>✓ Plant selection for your chart</li>
+                            <li>✓ Annual timing calendar</li>
+                            <li>✓ Follow-up support (30 days)</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="booking.html?service=garden-consult" class="btn btn-outline btn-full">
+                        Book Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Calendar Preview -->
+    <section id="calendar" class="calendar-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>This Month's Lunar Gardening Calendar</h2>
+                <p>A preview of what subscribers receive</p>
+            </div>
+            
+            <div class="calendar-table">
+                <div class="calendar-header">
+                    <span>Date</span>
+                    <span>Moon</span>
+                    <span>Sign</span>
+                    <span>Activity</span>
+                </div>
+                <div class="calendar-row favorable">
+                    <span>May 6</span>
+                    <span>🌓 1st Quarter</span>
+                    <span>♋ Cancer</span>
+                    <span class="activity">🌱 Plant leafy greens, water crops</span>
+                </div>
+                <div class="calendar-row favorable">
+                    <span>May 8</span>
+                    <span>🌔 Waxing</span>
+                    <span>♌ Leo</span>
+                    <span class="activity">🌱 Plant fruiting crops, feed plants</span>
+                </div>
+                <div class="calendar-row barren">
+                    <span>May 10</span>
+                    <span>🌕 Full</span>
+                    <span>♍ Virgo</span>
+                    <span class="activity">🌾 Harvest roots, weed garden</span>
+                </div>
+                <div class="calendar-row favorable">
+                    <span>May 13</span>
+                    <span>🌖 Waning</span>
+                    <span>♎ Libra</span>
+                    <span class="activity">🌱 Plant flowers, prune for beauty</span>
+                </div>
+                <div class="calendar-row root">
+                    <span>May 15</span>
+                    <span>🌗 Last Quarter</span>
+                    <span>♏ Scorpio</span>
+                    <span class="activity">🥕 Plant root crops, transplant</span>
+                </div>
+            </div>
+            
+            <div class="calendar-legend">
+                <span class="legend-item favorable"><span class="dot"></span> Favorable for planting</span>
+                <span class="legend-item root"><span class="dot"></span> Root crop days</span>
+                <span class="legend-item barren"><span class="dot"></span> Barren/harvest days</span>
+            </div>
+            
+            <div class="calendar-cta">
+                <p>Get the complete calendar with daily recommendations for $19/month</p>
+                <button class="btn btn-primary" onclick="openGardeningModal('planting-calendar')">
+                    Subscribe Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign Plant Parts -->
+    <section class="sign-plant-parts">
+        <div class="container">
+            <div class="section-header">
+                <h2>Zodiac Signs & Plant Parts</h2>
+                <p>Each sign rules a part of the plant. Plant when the moon is in the sign matching your crop.</p>
+            </div>
+            
+            <div class="signs-grid">
+                <div class="sign-card fire">
+                    <span class="sign-icon">♈</span>
+                    <h4>Aries</h4>
+                    <span class="plant-part">Seeds & Fruit</span>
+                    <p>Plant: Tomatoes, peppers, squash</p>
+                </div>
+                <div class="sign-card earth">
+                    <span class="sign-icon">♉</span>
+                    <h4>Taurus</h4>
+                    <span class="plant-part">Roots</span>
+                    <p>Plant: Carrots, beets, potatoes</p>
+                </div>
+                <div class="sign-card air">
+                    <span class="sign-icon">♊</span>
+                    <h4>Gemini</h4>
+                    <span class="plant-part">Flowers</span>
+                    <p>Plant: Herbs, flowering annuals</p>
+                </div>
+                <div class="sign-card water">
+                    <span class="sign-icon">♋</span>
+                    <h4>Cancer</h4>
+                    <span class="plant-part">Leaves</span>
+                    <p>Plant: Lettuce, spinach, cabbage</p>
+                </div>
+                <div class="sign-card fire">
+                    <span class="sign-icon">♌</span>
+                    <h4>Leo</h4>
+                    <span class="plant-part">Seeds & Fruit</span>
+                    <p>Plant: Sunflowers, corn, melons</p>
+                </div>
+                <div class="sign-card earth">
+                    <span class="sign-icon">♍</span>
+                    <h4>Virgo</h4>
+                    <span class="plant-part">Roots</span>
+                    <p>Plant: Radishes, turnips, onions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">☿</span>
+                        <span class="logo-text">Archaic Astrology</span>
+                    </a>
+                    <p>Garden in harmony with the cosmos.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Gardening Services</h4>
+                    <ul>
+                        <li><a href="gardening.html">Planting Calendar</a></li>
+                        <li><a href="gardening.html">Harvest Timing</a></li>
+                        <li><a href="gardening.html">Moon Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Other Services</h4>
+                    <ul>
+                        <li><a href="ai-readings.html">AI Readings</a></li>
+                        <li><a href="starluck.html">✦ StarLuck</a></li>
+                        <li><a href="wedding.html">💍 Wedding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="booking.html">Book Consultation</a></li>
+                        <li><a href="mailto:garden@archaicastrology.com">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Archaic Astrology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gardening.js"></script>
+    <script src="js/stripe-payments.js"></script>
+</body>
+</html>

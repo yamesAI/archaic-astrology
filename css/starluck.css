@@ -1,0 +1,522 @@
+/* ========================================
+   STARLUCK JACKPOT - Cosmic Timing Theme
+   ======================================== */
+
+/* StarLuck Theme Variables */
+.starluck-theme {
+    --starluck-primary: #1a0f2e;
+    --starluck-accent: #ffd700;
+    --starluck-accent-glow: rgba(255, 215, 0, 0.3);
+    --starluck-text: #f0e6ff;
+    --starluck-text-muted: #a090c0;
+}
+
+/* StarLuck Navigation */
+.starluck-nav {
+    background: rgba(26, 15, 46, 0.95);
+    border-bottom-color: rgba(255, 215, 0, 0.2);
+}
+
+.starluck-nav .logo-text {
+    color: var(--starluck-accent);
+}
+
+/* Hero Section */
+.starluck-hero {
+    background: linear-gradient(180deg, #1a0f2e 0%, #2d1b4e 50%, #1a0f2e 100%);
+    padding: calc(var(--space-2xl) + 60px) 0 var(--space-2xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.starfield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, white, transparent),
+        radial-gradient(2px 2px at 40px 70px, white, transparent),
+        radial-gradient(1px 1px at 90px 40px, white, transparent),
+        radial-gradient(2px 2px at 130px 80px, white, transparent),
+        radial-gradient(1px 1px at 160px 120px, white, transparent);
+    background-size: 200px 200px;
+    opacity: 0.5;
+    animation: twinkle 5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+.starluck-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.starluck-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--starluck-accent), #ffed4e);
+    color: var(--starluck-primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: var(--space-xs) var(--space-md);
+    border-radius: 20px;
+    margin-bottom: var(--space-lg);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.starluck-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 600;
+    color: var(--starluck-text);
+    margin-bottom: var(--space-md);
+    line-height: 1.1;
+    text-shadow: 0 0 40px var(--starluck-accent-glow);
+}
+
+.starluck-hero h1 .accent {
+    color: var(--starluck-accent);
+    display: block;
+}
+
+.starluck-hero .lead {
+    font-size: 1.35rem;
+    color: var(--starluck-text-muted);
+    margin-bottom: var(--space-sm);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.starluck-hero .tagline {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--starluck-accent);
+    font-style: italic;
+    margin-bottom: var(--space-xl);
+}
+
+.starluck-hero .hero-cta {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.starluck-hero .btn-primary {
+    background: linear-gradient(135deg, var(--starluck-accent), #ffed4e);
+    color: var(--starluck-primary);
+    border: none;
+    font-weight: 600;
+}
+
+.starluck-hero .btn-outline {
+    border-color: var(--starluck-accent);
+    color: var(--starluck-accent);
+}
+
+.starluck-hero .btn-outline:hover {
+    background: var(--starluck-accent);
+    color: var(--starluck-primary);
+}
+
+/* Floating Symbols */
+.floating-symbols {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-symbols span {
+    position: absolute;
+    font-size: 2rem;
+    color: var(--starluck-accent);
+    opacity: 0.2;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-symbols span:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.floating-symbols span:nth-child(2) { top: 60%; left: 15%; animation-delay: 1s; }
+.floating-symbols span:nth-child(3) { top: 30%; right: 10%; animation-delay: 2s; }
+.floating-symbols span:nth-child(4) { top: 70%; right: 20%; animation-delay: 3s; }
+.floating-symbols span:nth-child(5) { top: 40%; left: 50%; animation-delay: 4s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Philosophy Strip */
+.philosophy-strip {
+    background: linear-gradient(90deg, var(--starluck-primary), #2d1b4e, var(--starluck-primary));
+    padding: var(--space-lg) 0;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.philosophy-text {
+    text-align: center;
+    color: var(--starluck-text-muted);
+    font-size: 1.1rem;
+}
+
+.philosophy-text strong {
+    color: var(--starluck-accent);
+}
+
+.philosophy-text .highlight {
+    color: var(--starluck-text);
+}
+
+/* Services Grid */
+.starluck-services {
+    background: linear-gradient(180deg, #f8f4ff 0%, var(--color-bg) 100%);
+    padding: var(--space-2xl) 0;
+}
+
+.starluck-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.starluck-card {
+    background: white;
+    border-radius: 16px;
+    padding: var(--space-lg);
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+    border: 1px solid var(--color-border);
+}
+
+.starluck-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(26, 15, 46, 0.15);
+}
+
+.starluck-card.featured {
+    background: linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 100%);
+    color: var(--starluck-text);
+    border: 2px solid var(--starluck-accent);
+}
+
+.starluck-card.featured .card-shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 215, 0, 0.1) 50%,
+        transparent 70%
+    );
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.starluck-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-md);
+    position: relative;
+    z-index: 1;
+}
+
+.card-icon {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.card-meta {
+    text-align: right;
+}
+
+.card-tag {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-muted);
+    margin-bottom: 4px;
+}
+
+.starluck-card.featured .card-tag {
+    color: var(--starluck-text-muted);
+}
+
+.card-price {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.card-price span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.starluck-card.featured .card-price {
+    color: var(--starluck-accent);
+}
+
+.starluck-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+    position: relative;
+    z-index: 1;
+}
+
+.starluck-card.featured h3 {
+    color: var(--starluck-text);
+}
+
+.starluck-card p {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+    position: relative;
+    z-index: 1;
+}
+
+.starluck-card.featured p {
+    color: var(--starluck-text-muted);
+}
+
+.card-features {
+    margin-bottom: var(--space-md);
+    position: relative;
+    z-index: 1;
+}
+
+.card-features h4 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+}
+
+.starluck-card.featured .card-features h4 {
+    color: var(--starluck-text-muted);
+}
+
+.card-features ul {
+    list-style: none;
+}
+
+.card-features li {
+    padding: 6px 0;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.starluck-card.featured .card-features li {
+    color: var(--starluck-text-muted);
+    border-bottom-color: rgba(255, 215, 0, 0.2);
+}
+
+.card-cta {
+    position: relative;
+    z-index: 1;
+}
+
+.premium-card {
+    background: linear-gradient(135deg, #f8f4ff 0%, #fff 100%);
+    border: 2px dashed var(--color-border-dark);
+}
+
+/* Luck Calculator */
+.luck-calculator {
+    padding: var(--space-2xl) 0;
+    background: linear-gradient(135deg, var(--starluck-primary) 0%, #2d1b4e 100%);
+}
+
+.calculator-box {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 20px;
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.calculator-box h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--starluck-text);
+    margin-bottom: var(--space-sm);
+}
+
+.calculator-box > p {
+    color: var(--starluck-text-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.calculator-form {
+    text-align: left;
+}
+
+.calculator-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.calculator-form label {
+    display: block;
+    color: var(--starluck-text);
+    font-weight: 500;
+    margin-bottom: var(--space-xs);
+}
+
+.calculator-form select,
+.calculator-form input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--starluck-text);
+    font-size: 1rem;
+}
+
+.calculator-form select:focus,
+.calculator-form input:focus {
+    outline: none;
+    border-color: var(--starluck-accent);
+}
+
+.calculator-form button {
+    margin-top: var(--space-md);
+}
+
+.calculator-result {
+    margin-top: var(--space-lg);
+    padding: var(--space-lg);
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 12px;
+}
+
+/* Testimonials */
+.starluck-testimonials {
+    padding: var(--space-2xl) 0;
+    background: var(--color-bg);
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 12px;
+    padding: var(--space-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--starluck-accent);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+}
+
+.testimonial-card cite {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.testimonial-card .verified {
+    display: block;
+    font-size: 0.8rem;
+    color: #28a745;
+    margin-top: 4px;
+}
+
+/* Disclaimer */
+.starluck-disclaimer {
+    padding: var(--space-lg) 0;
+    background: #1a0f2e;
+}
+
+.disclaimer-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 100, 100, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 100, 100, 0.05);
+}
+
+.disclaimer-box h4 {
+    color: #ff6464;
+    margin-bottom: var(--space-xs);
+}
+
+.disclaimer-box p {
+    color: var(--starluck-text-muted);
+    font-size: 0.9rem;
+}
+
+/* Modal */
+.starluck-modal .modal-content {
+    background: linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 100%);
+    color: var(--starluck-text);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Footer */
+.starluck-footer {
+    background: #1a0f2e;
+    color: var(--starluck-text);
+}
+
+.starluck-footer .logo-text {
+    color: var(--starluck-accent);
+}
+
+.starluck-footer a {
+    color: var(--starluck-text-muted);
+}
+
+.starluck-footer a:hover {
+    color: var(--starluck-accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .starluck-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculator-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}

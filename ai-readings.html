@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant AI Astrology Readings | $5-$15 Quick Insights</title>
+    <meta name="description" content="Get instant AI-powered astrology readings. Daily luck scores, lucky numbers, birth chart snapshots, and yes/no horary answers. Delivered in seconds.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ai-readings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">☿</span>
+                <span class="logo-text">Archaic Astrology</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ai-readings.html" class="active">AI Readings</a></li>
+                <li><a href="starluck.html">✦ StarLuck</a></li>
+                <li><a href="booking.html" class="btn-nav">Book Reading</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="ai-hero">
+        <div class="container">
+            <div class="ai-hero-content">
+                <span class="ai-badge">⚡ Instant Delivery</span>
+                <h1>AI-Powered Astrology Readings</h1>
+                <p class="lead">Traditional wisdom meets modern speed. Get personalized astrology insights in seconds, not days.</p>
+                <p class="sub-lead">From $5. No appointment needed. Delivered instantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reading Types Grid -->
+    <section class="reading-types">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Reading</h2>
+                <p>All readings generated instantly using traditional astrological techniques</p>
+            </div>
+            
+            <div class="readings-grid">
+                <!-- Daily Luck Score -->
+                <div class="reading-card">
+                    <div class="reading-header">
+                        <span class="reading-icon">🎰</span>
+                        <span class="reading-price">$5</span>
+                    </div>
+                    <h3>Daily Luck Score</h3>
+                    <p>Your personal luck forecast for today. Luck score (0-100), lucky number, lucky color, and personalized advice.</p>
+                    <ul class="reading-features">
+                        <li>✓ Luck score out of 100</li>
+                        <li>✓ Your lucky number today</li>
+                        <li>✓ Lucky color & time</li>
+                        <li>✓ Personalized advice</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="openReadingModal('daily-luck')">
+                        Get My Luck Score
+                    </button>
+                </div>
+
+                <!-- Lucky Numbers -->
+                <div class="reading-card">
+                    <div class="reading-header">
+                        <span class="reading-icon">🔢</span>
+                        <span class="reading-price">$5</span>
+                    </div>
+                    <h3>Lucky Numbers</h3>
+                    <p>Your personalized lucky numbers based on your birth chart and current planetary positions.</p>
+                    <ul class="reading-features">
+                        <li>✓ 7 personalized numbers</li>
+                        <li>✓ Power number highlighted</li>
+                        <li>✓ Based on natal chart</li>
+                        <li>✓ Current sky influence</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="openReadingModal('lucky-numbers')">
+                        Get My Numbers
+                    </button>
+                </div>
+
+                <!-- Birth Chart Snapshot -->
+                <div class="reading-card featured">
+                    <div class="badge">Most Popular</div>
+                    <div class="reading-header">
+                        <span class="reading-icon">🜛</span>
+                        <span class="reading-price">$9</span>
+                    </div>
+                    <h3>Birth Chart Snapshot</h3>
+                    <p>A 300-400 word temperament reading based on your Sun, Moon, and Rising signs. The perfect introduction to your chart.</p>
+                    <ul class="reading-features">
+                        <li>✓ Temperament analysis</li>
+                        <li>✓ Sun-Moon synthesis</li>
+                        <li>✓ Key strengths identified</li>
+                        <li>✓ Growth areas highlighted</li>
+                        <li>✓ Delivered as PDF + text</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openReadingModal('birth-snapshot')">
+                        Get My Snapshot
+                    </button>
+                </div>
+
+                <!-- Lucky Windows -->
+                <div class="reading-card">
+                    <div class="reading-header">
+                        <span class="reading-icon">🗓️</span>
+                        <span class="reading-price">$12</span>
+                    </div>
+                    <h3>7-Day Lucky Windows</h3>
+                    <p>Your personal timing forecast for the week ahead. Know the best days and hours for important activities.</p>
+                    <ul class="reading-features">
+                        <li>✓ Daily luck scores</li>
+                        <li>✓ Best hours each day</li>
+                        <li>✓ Activities to favor/avoid</li>
+                        <li>✓ Moon phase guidance</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="openReadingModal('lucky-windows')">
+                        Get My Week
+                    </button>
+                </div>
+
+                <!-- Yes/No Horary -->
+                <div class="reading-card">
+                    <div class="reading-header">
+                        <span class="reading-icon">❓</span>
+                        <span class="reading-price">$7</span>
+                    </div>
+                    <h3>Yes/No Horary</h3>
+                    <p>Ask one specific question. Get a clear yes or no answer with explanation based on horary astrology.</p>
+                    <ul class="reading-features">
+                        <li>✓ Clear yes/no answer</li>
+                        <li>✓ Confidence percentage</li>
+                        <li>✓ Astrological explanation</li>
+                        <li>✓ Timing estimate</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="openReadingModal('yes-no')">
+                        Ask a Question
+                    </button>
+                </div>
+
+                <!-- Moon Phase Guidance -->
+                <div class="reading-card">
+                    <div class="reading-header">
+                        <span class="reading-icon">🌙</span>
+                        <span class="reading-price">$6</span>
+                    </div>
+                    <h3>Moon Phase Guidance</h3>
+                    <p>Personalized guidance based on the current moon phase and how it affects your specific birth chart.</p>
+                    <ul class="reading-features">
+                        <li>✓ Current moon phase</li>
+                        <li>✓ How it affects your signs</li>
+                        <li>✓ Recommended actions</li>
+                        <li>✓ Personal affirmation</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="openReadingModal('moon-phase')">
+                        Get Guidance
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h3>Enter Your Birth Info</h3>
+                    <p>Provide your birth date, time, and location. The more precise, the more accurate your reading.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h3>Choose Your Reading</h3>
+                    <p>Select from 6 instant reading types. Each uses traditional astrological techniques.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h3>Pay & Receive Instantly</h3>
+                    <p>Secure payment processing. Your personalized reading delivered in seconds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compare to Premium -->
+    <section class="compare-tier">
+        <div class="container">
+            <div class="compare-content">
+                <h2>Want to Go Deeper?</h2>
+                <p>These instant readings are perfect for quick insights. For comprehensive analysis and personal consultation, book a premium reading with me.</p>
+                
+                <div class="compare-grid">
+                    <div class="compare-column">
+                        <h3>AI Instant Readings</h3>
+                        <ul>
+                            <li>✓ Delivered in seconds</li>
+                            <li>✓ $5-$15 per reading</li>
+                            <li>✓ Algorithm-generated</li>
+                            <li>✓ Great for daily guidance</li>
+                            <li>✓ Available 24/7</li>
+                        </ul>
+                        <span class="tier-badge">You're Here</span>
+                    </div>
+                    <div class="compare-column premium">
+                        <h3>Premium Consultations</h3>
+                        <ul>
+                            <li>✓ 45-90 minute sessions</li>
+                            <li>✓ $75-$300 per reading</li>
+                            <li>✓ Personalized by expert</li>
+                            <li>✓ Deep analysis & synthesis</li>
+                            <li>✓ Recording included</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-outline">Book Premium</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reading Modal -->
+    <div id="reading-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeReadingModal()">&times;</button>
+            <div id="modal-body">
+                <!-- Content injected by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">☿</span>
+                        <span class="logo-text">Archaic Astrology</span>
+                    </a>
+                    <p>Traditional astrology for modern lives. Techniques from Ptolemy to William Lilly.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Readings</h4>
+                    <ul>
+                        <li><a href="ai-readings.html">Daily Luck Score</a></li>
+                        <li><a href="ai-readings.html">Lucky Numbers</a></li>
+                        <li><a href="ai-readings.html">Birth Chart Snapshot</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Specialty</h4>
+                    <ul>
+                        <li><a href="starluck.html">✦ StarLuck Jackpot</a></li>
+                        <li><a href="wedding.html">Wedding & Synastry</a></li>
+                        <li><a href="gardening.html">Astro Gardening</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Premium</h4>
+                    <ul>
+                        <li><a href="booking.html">Book Consultation</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Archaic Astrology. All rights reserved.</p>
+                <p class="disclaimer">Astrology is for entertainment and self-reflection purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/ai-readings.js"></script>
+    <script src="js/stripe-payments.js"></script>
+</body>
+</html>

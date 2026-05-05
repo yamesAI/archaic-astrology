@@ -1,0 +1,381 @@
+/* ========================================
+   WEDDING & SYNASTRY - Love Theme
+   ======================================== */
+
+/* Wedding Theme Variables */
+.wedding-theme {
+    --wedding-primary: #8B3A3A;
+    --wedding-accent: #FFB6C1;
+    --wedding-gold: #D4AF37;
+    --wedding-rose: #FFE4E1;
+}
+
+/* Hero Section */
+.wedding-hero {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe4e1 50%, #fff0f3 100%);
+    padding: calc(var(--space-2xl) + 60px) 0 var(--space-2xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0.1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 85 C50 85, 20 60, 20 40 C20 25, 30 15, 40 15 C45 15, 50 20, 50 25 C50 20, 55 15, 60 15 C70 15, 80 25, 80 40 C80 60, 50 85, 50 85Z' fill='%238B3A3A'/%3E%3C/svg%3E");
+    background-size: 100px 100px;
+}
+
+.wedding-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.wedding-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--wedding-primary), #a04545);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: var(--space-xs) var(--space-md);
+    border-radius: 20px;
+    margin-bottom: var(--space-lg);
+    letter-spacing: 0.5px;
+}
+
+.wedding-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
+    color: var(--wedding-primary);
+    margin-bottom: var(--space-md);
+    line-height: 1.2;
+}
+
+.wedding-hero h1 .accent {
+    color: var(--wedding-gold);
+    display: block;
+}
+
+.wedding-hero .lead {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wedding-hero .hero-cta {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Quote Section */
+.wedding-quote {
+    background: var(--wedding-primary);
+    padding: var(--space-xl) 0;
+    text-align: center;
+}
+
+.wedding-quote blockquote {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.wedding-quote blockquote p {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: white;
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+}
+
+.wedding-quote blockquote cite {
+    color: var(--wedding-accent);
+    font-size: 1rem;
+}
+
+/* Services Grid */
+.wedding-services {
+    padding: var(--space-2xl) 0;
+    background: var(--color-bg);
+}
+
+.wedding-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.wedding-card {
+    background: white;
+    border-radius: 16px;
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+    display: flex;
+    flex-direction: column;
+}
+
+.wedding-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(139, 58, 58, 0.1);
+}
+
+.wedding-card.featured {
+    border: 2px solid var(--wedding-primary);
+    background: linear-gradient(135deg, white 0%, #fff5f5 100%);
+    position: relative;
+}
+
+.wedding-card.featured::before {
+    content: '💍';
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 2rem;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wedding-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-md);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+}
+
+.card-meta {
+    text-align: right;
+}
+
+.card-tag {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-muted);
+    margin-bottom: 4px;
+}
+
+.card-price {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--wedding-primary);
+}
+
+.wedding-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+}
+
+.wedding-card p {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+    flex-grow: 1;
+}
+
+.card-features {
+    margin-bottom: var(--space-md);
+}
+
+.card-features h4 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+}
+
+.card-features ul {
+    list-style: none;
+}
+
+.card-features li {
+    padding: 6px 0;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.card-ideal {
+    background: var(--wedding-rose);
+    padding: var(--space-sm);
+    border-radius: 8px;
+    margin-bottom: var(--space-md);
+    font-size: 0.9rem;
+}
+
+.card-ideal strong {
+    color: var(--wedding-primary);
+}
+
+.wedding-card .btn {
+    margin-top: auto;
+}
+
+.premium-card {
+    background: linear-gradient(135deg, #fff9f9 0%, white 100%);
+    border: 2px dashed var(--wedding-primary);
+}
+
+/* Wedding Election Section */
+.wedding-election-section {
+    padding: var(--space-2xl) 0;
+    background: linear-gradient(135deg, var(--wedding-rose) 0%, #fff 100%);
+}
+
+.election-box {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: var(--space-xl);
+    box-shadow: 0 10px 50px rgba(139, 58, 58, 0.1);
+}
+
+.election-box h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--wedding-primary);
+    text-align: center;
+    margin-bottom: var(--space-sm);
+}
+
+.election-box > p {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-xl);
+}
+
+.election-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.form-section {
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: var(--space-md);
+    background: var(--color-bg);
+}
+
+.form-section h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--wedding-primary);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-xs);
+    border-bottom: 2px solid var(--wedding-accent);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.wide {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--wedding-primary);
+}
+
+/* FAQ Section */
+.wedding-faq {
+    padding: var(--space-2xl) 0;
+    background: var(--color-bg);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    padding: var(--space-md);
+    border-left: 4px solid var(--wedding-primary);
+}
+
+.faq-item h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-xs);
+}
+
+.faq-item p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+/* Modal */
+.wedding-modal .modal-content {
+    background: linear-gradient(135deg, #fff9f9 0%, white 100%);
+    border: 2px solid var(--wedding-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .wedding-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

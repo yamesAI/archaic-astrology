@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding & Relationship Astrology | Synastry & Date Elections</title>
+    <meta name="description" content="Wedding date election, compatibility readings, and relationship astrology. Traditional synastry techniques for love, marriage, and partnership.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wedding.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="wedding-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">☿</span>
+                <span class="logo-text">Archaic Astrology</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ai-readings.html">AI Readings</a></li>
+                <li><a href="starluck.html">✦ StarLuck</a></li>
+                <li><a href="wedding.html" class="active">💍 Wedding</a></li>
+                <li><a href="booking.html" class="btn-nav">Book Reading</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="wedding-hero">
+        <div class="hero-hearts"></div>
+        <div class="container">
+            <div class="wedding-hero-content">
+                <span class="wedding-badge">💍 Love & Partnership</span>
+                <h1>Written in the Stars.<br><span class="accent">Sealed in Time.</span></h1>
+                <p class="lead">Traditional astrology for love, marriage, and commitment. From compatibility analysis to choosing your wedding date using techniques William Lilly himself used.</p>
+                <div class="hero-cta">
+                    <a href="#services" class="btn btn-primary btn-large">Explore Services</a>
+                    <a href="#wedding-election" class="btn btn-outline btn-large">Elect a Wedding Date</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="wedding-quote">
+        <div class="container">
+            <blockquote>
+                <p>"Fortify Venus above all — it is impossible the marriage should be good where Venus is impotent or afflicted."</p>
+                <cite>— William Ramesey, 17th Century Astrologer</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="wedding-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Relationship Astrology Services</h2>
+                <p>Traditional techniques for modern love</p>
+            </div>
+            
+            <div class="wedding-grid">
+                <!-- Wedding Date Election -->
+                <div class="wedding-card featured">
+                    <div class="wedding-card-header">
+                        <span class="card-icon">💒</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Most Important</span>
+                            <span class="card-price">$75</span>
+                        </div>
+                    </div>
+                    <h3>Wedding Date Election</h3>
+                    <p>Choose the most auspicious date for your wedding. Using electional astrology, we find when Venus is dignified, the Moon applies favorably, and the 1st-7th house connection is strong.</p>
+                    
+                    <div class="card-features">
+                        <h4>What You Get:</h4>
+                        <ul>
+                            <li>✓ 5-7 optimal wedding dates analyzed</li>
+                            <li>✓ Venus dignity assessment for each</li>
+                            <li>✓ Moon phase & aspect evaluation</li>
+                            <li>✓ 1st house (you) & 7th (marriage) connection</li>
+                            <li>✓ Written report with recommendations</li>
+                            <li>✓ 30-minute consultation included</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-ideal">
+                        <strong>Ideal For:</strong> Couples planning their wedding who want the cosmos aligned with their commitment
+                    </div>
+                    
+                    <button class="btn btn-primary btn-full" onclick="openWeddingModal('wedding-election')">
+                        Find My Wedding Date
+                    </button>
+                </div>
+
+                <!-- Synastry Compatibility -->
+                <div class="wedding-card">
+                    <div class="wedding-card-header">
+                        <span class="card-icon">💕</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Deep Analysis</span>
+                            <span class="card-price">$49</span>
+                        </div>
+                    </div>
+                    <h3>Synastry Compatibility</h3>
+                    <p>Compare two birth charts to understand relationship dynamics. Sun-Moon connections, Venus-Mars chemistry, and long-term compatibility indicators.</p>
+                    
+                    <div class="card-features">
+                        <h4>What You Get:</h4>
+                        <ul>
+                            <li>✓ Emotional compatibility score</li>
+                            <li>✓ Physical/romantic chemistry</li>
+                            <li>✓ Mental connection analysis</li>
+                            <li>✓ Long-term potential assessment</li>
+                            <li>✓ Challenge areas identified</li>
+                            <li>✓ 15-page written report</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn btn-secondary btn-full" onclick="openWeddingModal('synastry')">
+                        Check Compatibility
+                    </button>
+                </div>
+
+                <!-- "Is He/She The One?" -->
+                <div class="wedding-card">
+                    <div class="wedding-card-header">
+                        <span class="card-icon">❓</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Horary</span>
+                            <span class="card-price">$29</span>
+                        </div>
+                    </div>
+                    <h3>"Is He/She The One?"</h3>
+                    <p>Traditional horary astrology answers your relationship question with a clear yes/no and detailed explanation. Cast for the moment of inquiry.</p>
+                    
+                    <div class="card-features">
+                        <h4>What You Get:</h4>
+                        <ul>
+                            <li>✓ Clear yes/no answer</li>
+                            <li>✓ Confidence percentage</li>
+                            <li>✓ Partner's true nature revealed</li>
+                            <li>✓ Relationship outcome timing</li>
+                            <li>✓ Written interpretation (500+ words)</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn btn-secondary btn-full" onclick="openWeddingModal('the-one')">
+                        Ask the Question
+                    </button>
+                </div>
+
+                <!-- Composite Chart -->
+                <div class="wedding-card">
+                    <div class="wedding-card-header">
+                        <span class="card-icon">⚭</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Advanced</span>
+                            <span class="card-price">$59</span>
+                        </div>
+                    </div>
+                    <h3>Composite Chart Analysis</h3>
+                    <p>The "relationship as entity" chart. See your partnership as its own being with its own strengths, challenges, and destiny. Best for committed couples.</p>
+                    
+                    <div class="card-features">
+                        <h4>What You Get:</h4>
+                        <ul>
+                            <li>✓ Midpoint composite chart</li>
+                            <li>✓ Relationship purpose analysis</li>
+                            <li>✓ Shared strengths & challenges</li>
+                            <li>✓ Timing for relationship milestones</li>
+                            <li>✓ 20-page written report</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn btn-secondary btn-full" onclick="openWeddingModal('composite')">
+                        Analyze Our Relationship
+                    </button>
+                </div>
+
+                <!-- Fertility Timing -->
+                <div class="wedding-card">
+                    <div class="wedding-card-header">
+                        <span class="card-icon">🌱</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Specialized</span>
+                            <span class="card-price">$39</span>
+                        </div>
+                    </div>
+                    <h3>Fertility Timing</h3>
+                    <p>Elect optimal conception windows using traditional techniques. Fortify the 5th house (children), ensure Moon is waxing and well-aspected.</p>
+                    
+                    <div class="card-features">
+                        <h4>What You Get:</h4>
+                        <ul>
+                            <li>✓ 3-5 optimal conception windows</li>
+                            <li>✓ 5th house (children) analysis</li>
+                            <li>✓ Moon phase recommendations</li>
+                            <li>✓ Written timing report</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn btn-secondary btn-full" onclick="openWeddingModal('fertility')">
+                        Find Optimal Timing
+                    </button>
+                </div>
+
+                <!-- Couples Premium -->
+                <div class="wedding-card premium-card">
+                    <div class="wedding-card-header">
+                        <span class="card-icon">👑</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Full Service</span>
+                            <span class="card-price">$250</span>
+                        </div>
+                    </div>
+                    <h3>Wedding Date + Couples Session</h3>
+                    <p>The complete package. Wedding date election PLUS a 2-hour couples consultation covering synastry, composite, and relationship timing.</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ Wedding date election ($75)</li>
+                            <li>✓ Synastry analysis ($49)</li>
+                            <li>✓ Composite chart ($59)</li>
+                            <li>✓ 2-hour couples consultation</li>
+                            <li>✓ Recording included</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="booking.html?service=wedding-complete" class="btn btn-outline btn-full">
+                        Book Complete Package
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Date Election Form -->
+    <section id="wedding-election" class="wedding-election-section">
+        <div class="container">
+            <div class="election-box">
+                <h2>Elect Your Wedding Date</h2>
+                <p>Provide your birth details and desired timeframe. We'll analyze the heavens to find your optimal wedding dates.</p>
+                
+                <form id="wedding-election-form" class="election-form">
+                    <div class="form-section">
+                        <h3>Partner 1</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Birth Date</label>
+                                <input type="date" name="p1-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Birth Time</label>
+                                <input type="time" name="p1-time">
+                            </div>
+                            <div class="form-group wide">
+                                <label>Birth Location</label>
+                                <input type="text" name="p1-location" placeholder="City, Country" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Partner 2</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Birth Date</label>
+                                <input type="date" name="p2-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Birth Time</label>
+                                <input type="time" name="p2-time">
+                            </div>
+                            <div class="form-group wide">
+                                <label>Birth Location</label>
+                                <input type="text" name="p2-location" placeholder="City, Country" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Wedding Preferences</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Earliest Date</label>
+                                <input type="date" name="earliest-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Latest Date</label>
+                                <input type="date" name="latest-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Preferred Day</label>
+                                <select name="preferred-day">
+                                    <option value="any">Any day</option>
+                                    <option value="friday">Friday (Venus)</option>
+                                    <option value="saturday">Saturday (Saturn)</option>
+                                    <option value="sunday">Sunday (Sun)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large btn-full">
+                        Find Our Wedding Dates — $75
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="wedding-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How far in advance should we elect our wedding date?</h4>
+                    <p>Ideally 6-12 months before the wedding. This gives you time to secure venues and vendors for the optimal dates. Rush elections (under 3 months) have limited options.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What if we don't know our exact birth times?</h4>
+                    <p>Birth times are important but not absolutely required. We can work with a time range or focus on date-only techniques. The more precise the time, the more detailed the election.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can you work with our venue's limited availability?</h4>
+                    <p>Yes. Provide us with the dates your venue has available, and we'll rank them from most to least auspicious. Sometimes compromise is necessary—we'll guide you to the best option within your constraints.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What's the difference between synastry and composite?</h4>
+                    <p>Synastry compares two charts (how you affect each other). Composite creates a new chart for the relationship itself (the entity you form together). Both are valuable for different insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="wedding-modal" class="modal wedding-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeWeddingModal()">&times;</button>
+            <div id="wedding-modal-body">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">☿</span>
+                        <span class="logo-text">Archaic Astrology</span>
+                    </a>
+                    <p>Traditional astrology for love and partnership.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Wedding Services</h4>
+                    <ul>
+                        <li><a href="wedding.html">Date Election</a></li>
+                        <li><a href="wedding.html">Compatibility</a></li>
+                        <li><a href="wedding.html">Composite Chart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Other Services</h4>
+                    <ul>
+                        <li><a href="ai-readings.html">AI Readings</a></li>
+                        <li><a href="starluck.html">✦ StarLuck</a></li>
+                        <li><a href="gardening.html">Astro Gardening</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="booking.html">Book Consultation</a></li>
+                        <li><a href="mailto:wedding@archaicastrology.com">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Archaic Astrology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/wedding.js"></script>
+    <script src="js/stripe-payments.js"></script>
+</body>
+</html>

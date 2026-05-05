@@ -1,0 +1,436 @@
+/* ========================================
+   ASTRO GARDENING - Nature Theme
+   ======================================== */
+
+/* Gardening Theme Variables */
+.gardening-theme {
+    --garden-green: #2d5016;
+    --garden-light: #4a7c23;
+    --garden-accent: #8fbc45;
+    --garden-earth: #8b7355;
+    --garden-sky: #e8f4f8;
+}
+
+/* Hero Section */
+.gardening-hero {
+    background: linear-gradient(180deg, #e8f4e8 0%, #d4e8d4 50%, #c8e0c8 100%);
+    padding: calc(var(--space-2xl) + 60px) 0 var(--space-2xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-leaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0.1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 Q70 30, 50 50 Q30 70, 50 90 Q60 50, 50 10Z' fill='%232d5016'/%3E%3C/svg%3E");
+    background-size: 80px 80px;
+}
+
+.gardening-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gardening-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--garden-green), var(--garden-light));
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: var(--space-xs) var(--space-md);
+    border-radius: 20px;
+    margin-bottom: var(--space-lg);
+    letter-spacing: 0.5px;
+}
+
+.gardening-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
+    color: var(--garden-green);
+    margin-bottom: var(--space-md);
+    line-height: 1.2;
+}
+
+.gardening-hero h1 .accent {
+    color: var(--garden-accent);
+    display: block;
+}
+
+.gardening-hero .lead {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gardening-hero .hero-cta {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Philosophy Section */
+.gardening-philosophy {
+    padding: var(--space-2xl) 0;
+    background: var(--color-bg);
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.philosophy-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--garden-green);
+    margin-bottom: var(--space-md);
+}
+
+.philosophy-text p {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+}
+
+.moon-phases-diagram {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+.phase {
+    background: white;
+    border-radius: 12px;
+    padding: var(--space-md);
+    text-align: center;
+    border: 2px solid var(--color-border);
+    transition: transform var(--transition-fast);
+}
+
+.phase:hover {
+    transform: translateY(-4px);
+    border-color: var(--garden-accent);
+}
+
+.phase-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.phase-name {
+    display: block;
+    font-weight: 600;
+    color: var(--garden-green);
+    margin-bottom: 4px;
+}
+
+.phase-action {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* Services Grid */
+.gardening-services {
+    padding: var(--space-2xl) 0;
+    background: linear-gradient(180deg, #f5faf5 0%, var(--color-bg) 100%);
+}
+
+.gardening-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.gardening-card {
+    background: white;
+    border-radius: 16px;
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+    display: flex;
+    flex-direction: column;
+}
+
+.gardening-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(45, 80, 22, 0.1);
+}
+
+.gardening-card.featured {
+    border: 2px solid var(--garden-green);
+    background: linear-gradient(135deg, white 0%, #f5faf5 100%);
+}
+
+.gardening-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-md);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+}
+
+.card-meta {
+    text-align: right;
+}
+
+.card-tag {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-muted);
+    margin-bottom: 4px;
+}
+
+.card-price {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--garden-green);
+}
+
+.card-price span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.gardening-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+}
+
+.gardening-card p {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+    flex-grow: 1;
+}
+
+.card-features {
+    margin-bottom: var(--space-md);
+}
+
+.card-features h4 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+}
+
+.card-features ul {
+    list-style: none;
+}
+
+.card-features li {
+    padding: 6px 0;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.gardening-card .btn {
+    margin-top: auto;
+}
+
+.premium-card {
+    background: linear-gradient(135deg, #f9fdf9 0%, white 100%);
+    border: 2px dashed var(--garden-green);
+}
+
+/* Calendar Preview */
+.calendar-preview {
+    padding: var(--space-2xl) 0;
+    background: var(--garden-sky);
+}
+
+.calendar-table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: var(--space-xl);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: 100px 120px 100px 1fr;
+    background: var(--garden-green);
+    color: white;
+    font-weight: 600;
+    padding: var(--space-sm) var(--space-md);
+}
+
+.calendar-row {
+    display: grid;
+    grid-template-columns: 100px 120px 100px 1fr;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    align-items: center;
+}
+
+.calendar-row:last-child {
+    border-bottom: none;
+}
+
+.calendar-row.favorable {
+    background: rgba(143, 188, 69, 0.1);
+    border-left: 4px solid var(--garden-accent);
+}
+
+.calendar-row.root {
+    background: rgba(139, 115, 85, 0.1);
+    border-left: 4px solid var(--garden-earth);
+}
+
+.calendar-row.barren {
+    background: rgba(200, 200, 200, 0.1);
+    border-left: 4px solid #999;
+}
+
+.calendar-row .activity {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.calendar-legend {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-top: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+.legend-item .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-item.favorable .dot { background: var(--garden-accent); }
+.legend-item.root .dot { background: var(--garden-earth); }
+.legend-item.barren .dot { background: #999; }
+
+.calendar-cta {
+    text-align: center;
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    background: white;
+    border-radius: 12px;
+}
+
+.calendar-cta p {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-sm);
+}
+
+/* Sign Plant Parts */
+.sign-plant-parts {
+    padding: var(--space-2xl) 0;
+    background: var(--color-bg);
+}
+
+.signs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.sign-card {
+    background: white;
+    border-radius: 12px;
+    padding: var(--space-md);
+    text-align: center;
+    border: 2px solid var(--color-border);
+    transition: transform var(--transition-fast);
+}
+
+.sign-card:hover {
+    transform: translateY(-4px);
+}
+
+.sign-card.fire { border-color: #ff6b6b; background: linear-gradient(135deg, white, #fff5f5); }
+.sign-card.earth { border-color: var(--garden-earth); background: linear-gradient(135deg, white, #f9f7f4); }
+.sign-card.air { border-color: #74c0fc; background: linear-gradient(135deg, white, #f0f9ff); }
+.sign-card.water { border-color: #339af0; background: linear-gradient(135deg, white, #f0f7ff); }
+
+.sign-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.sign-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.plant-part {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--garden-green);
+    margin-bottom: 4px;
+}
+
+.sign-card p {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .philosophy-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .moon-phases-diagram {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gardening-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calendar-header,
+    .calendar-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+    
+    .signs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

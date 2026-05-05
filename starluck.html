@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✦ StarLuck Jackpot | Cosmic Timing for Casino, Lottery & Trading</title>
+    <meta name="description" content="Astrological timing for gambling, lottery, and speculation. Casino calendars, lottery number elections, trading entry timing. Not luck — timing.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/starluck.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="starluck-theme">
+    <!-- Navigation -->
+    <nav class="navbar starluck-nav">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">StarLuck Jackpot</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ai-readings.html">AI Readings</a></li>
+                <li><a href="starluck.html" class="active">✦ StarLuck</a></li>
+                <li><a href="booking.html" class="btn-nav">Book Reading</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="starluck-hero">
+        <div class="starfield"></div>
+        <div class="container">
+            <div class="starluck-hero-content">
+                <span class="starluck-badge">✦ Cosmic Timing</span>
+                <h1>Not Luck.<br><span class="accent">Timing.</span></h1>
+                <p class="lead">The house can't predict the planets. Use electional astrology to find your optimal windows for casino play, lottery tickets, sports bets, and trading entries.</p>
+                <p class="tagline">"The window opens when the planets align."</p>
+                <div class="hero-cta">
+                    <a href="#calculator" class="btn btn-primary btn-large">Get Your Timing</a>
+                    <a href="#services" class="btn btn-outline btn-large">Explore Services</a>
+                </div>
+            </div>
+        </div>
+        <div class="floating-symbols">
+            <span>♃</span>
+            <span>♀</span>
+            <span>☽</span>
+            <span>☉</span>
+            <span>♄</span>
+        </div>
+    </section>
+
+    <!-- Philosophy Strip -->
+    <section class="philosophy-strip">
+        <div class="container">
+            <p class="philosophy-text">
+                Based on <strong>Christopher Warnock's Electional Astrology</strong> — 
+                the same techniques used for 500+ years to choose auspicious moments. 
+                <span class="highlight">Applied to speculation.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="starluck-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cosmic Timing Services</h2>
+                <p>Each reading applies traditional electional astrology to find your best windows</p>
+            </div>
+            
+            <div class="starluck-grid">
+                <!-- Casino Timing Calendar -->
+                <div class="starluck-card featured">
+                    <div class="card-shine"></div>
+                    <div class="starluck-card-header">
+                        <span class="card-icon">🎰</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Monthly</span>
+                            <span class="card-price">$27<span>/month</span></span>
+                        </div>
+                    </div>
+                    <h3>Casino Timing Calendar</h3>
+                    <p>Your personal monthly calendar showing the best days and planetary hours for casino play. Based on your natal chart's relationship to Venus (luck) and Jupiter (fortune).</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ Daily luck scores (1-100)</li>
+                            <li>✓ Best planetary hours to play</li>
+                            <li>✓ Game recommendations by day</li>
+                            <li>✓ Days to avoid marked clearly</li>
+                            <li>✓ Venus & Jupiter transit tracking</li>
+                            <li>✓ Moon phase gambling guide</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-cta">
+                        <button class="btn btn-primary btn-full" onclick="openStarluckModal('casino-calendar')">
+                            Get My Casino Calendar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lottery Number Elector -->
+                <div class="starluck-card">
+                    <div class="starluck-card-header">
+                        <span class="card-icon">🎱</span>
+                        <div class="card-meta">
+                            <span class="card-tag">One-Time</span>
+                            <span class="card-price">$19</span>
+                        </div>
+                    </div>
+                    <h3>Lottery Number Elector</h3>
+                    <p>The optimal moment to purchase your ticket, combined with lucky numbers based on electional principles. Elect for Venus strength and 5th house (speculation) activation.</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ Best date/time to buy ticket</li>
+                            <li>✓ 7 personalized lucky numbers</li>
+                            <li>✓ Planetary hour analysis</li>
+                            <li>✓ 5th house speculation timing</li>
+                            <li>✓ Venus strength assessment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-cta">
+                        <button class="btn btn-secondary btn-full" onclick="openStarluckModal('lottery-elector')">
+                            Elect My Numbers
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sports Bet Horary -->
+                <div class="starluck-card">
+                    <div class="starluck-card-header">
+                        <span class="card-icon">⚽</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Per Game</span>
+                            <span class="card-price">$15</span>
+                        </div>
+                    </div>
+                    <h3>Sports Bet Horary</h3>
+                    <p>Ask "Should I bet on [team/fighter]?" Traditional horary astrology gives a clear answer with confidence level. Check 1st house (you) vs 7th house (opponent).</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ Yes/no answer with confidence %</li>
+                            <li>✓ Team/Fighter significator analysis</li>
+                            <li>✓ Chart ruler strength assessment</li>
+                            <li>✓ Timing of outcome prediction</li>
+                            <li>✓ Written interpretation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-cta">
+                        <button class="btn btn-secondary btn-full" onclick="openStarluckModal('sports-horary')">
+                            Ask About a Game
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Trading Entry Election -->
+                <div class="starluck-card">
+                    <div class="starluck-card-header">
+                        <span class="card-icon">📈</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Per Trade</span>
+                            <span class="card-price">$39</span>
+                        </div>
+                    </div>
+                    <h3>Trading Entry Election</h3>
+                    <p>Find the optimal moment to enter a trade. Fortify your 2nd house (money), ensure Moon applies to benefic, avoid VOC. For forex, crypto, stocks, commodities.</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ 3-5 optimal entry windows</li>
+                            <li>✓ 2nd house money ruler analysis</li>
+                            <li>✓ Jupiter & Venus dignity check</li>
+                            <li>✓ VOC Moon avoidance</li>
+                            <li>✓ Written election report</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-cta">
+                        <button class="btn btn-secondary btn-full" onclick="openStarluckModal('trading-election')">
+                            Find Entry Window
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Investment Moon Cycle -->
+                <div class="starluck-card">
+                    <div class="starluck-card-header">
+                        <span class="card-icon">🌙</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Monthly</span>
+                            <span class="card-price">$29<span>/month</span></span>
+                        </div>
+                    </div>
+                    <h3>Investment Moon Cycle</h3>
+                    <p>Your personal financial lunar calendar. Track how moon phases and signs affect your specific chart's money houses. Best days for buying, selling, holding.</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ Monthly financial moon calendar</li>
+                            <li>✓ Best days for investments</li>
+                            <li>✓ Warning days marked</li>
+                            <li>✓ 2nd & 8th house tracking</li>
+                            <li>✓ Jupiter transit alerts</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-cta">
+                        <button class="btn btn-secondary btn-full" onclick="openStarluckModal('investment-moon')">
+                            Get Moon Calendar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Premium: Business Launch -->
+                <div class="starluck-card premium-card">
+                    <div class="starluck-card-header">
+                        <span class="card-icon">🚀</span>
+                        <div class="card-meta">
+                            <span class="card-tag">Consultation</span>
+                            <span class="card-price">$200</span>
+                        </div>
+                    </div>
+                    <h3>Business Launch Election</h3>
+                    <p>Starting a gambling/adjacent business? Get a full electional consultation to choose the optimal incorporation and launch dates. Premium 1-on-1 service.</p>
+                    
+                    <div class="card-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>✓ 90-minute consultation</li>
+                            <li>✓ Multiple date options analyzed</li>
+                            <li>✓ Natal chart integration</li>
+                            <li>✓ Incorporation timing</li>
+                            <li>✓ Grand opening election</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-cta">
+                        <a href="booking.html?service=business-launch" class="btn btn-outline btn-full">
+                            Book Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Calculator -->
+    <section id="calculator" class="luck-calculator">
+        <div class="container">
+            <div class="calculator-box">
+                <h2>Quick Luck Calculator</h2>
+                <p>Get an instant luck score for today based on current planetary positions</p>
+                
+                <form id="luck-calculator-form" class="calculator-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="calc-sun">Your Sun Sign</label>
+                            <select id="calc-sun" required>
+                                <option value="">Select...</option>
+                                <option value="Aries">♈ Aries</option>
+                                <option value="Taurus">♉ Taurus</option>
+                                <option value="Gemini">♊ Gemini</option>
+                                <option value="Cancer">♋ Cancer</option>
+                                <option value="Leo">♌ Leo</option>
+                                <option value="Virgo">♍ Virgo</option>
+                                <option value="Libra">♎ Libra</option>
+                                <option value="Scorpio">♏ Scorpio</option>
+                                <option value="Sagittarius">♐ Sagittarius</option>
+                                <option value="Capricorn">♑ Capricorn</option>
+                                <option value="Aquarius">♒ Aquarius</option>
+                                <option value="Pisces">♓ Pisces</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="calc-activity">Activity</label>
+                                <option value="casino">🎰 Casino/Gaming</option>
+                                <option value="lottery">🎱 Lottery</option>
+                                <option value="sports">⚽ Sports Bet</option>
+                                <option value="trading">📈 Trading</option>
+                                <option value="general">✨ General</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large btn-full">
+                        Calculate My Luck Today
+                    </button>
+                </form>
+                
+                <div id="calculator-result" class="calculator-result" style="display: none;">
+                    <!-- Results injected by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="starluck-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Players Say</h2>
+            </div>
+            <div class="testimonial-grid">
+                <blockquote class="testimonial-card">
+                    <p>"The casino calendar saved me from bad sessions. On my Venus days, I consistently do better. It's not about winning every time—it's about playing when the energy supports you."</p>
+                    <footer>
+                        <cite>— Marcus T.</cite>
+                        <span class="verified">✓ Verified Client</span>
+                    </footer>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <p>"I used the trading election for a crypto entry. The timing was spot-on—caught a 23% move. The 2nd house analysis made me understand my personal money patterns."</p>
+                    <footer>
+                        <cite>— Jennifer K.</cite>
+                        <span class="verified">✓ Verified Client</span>
+                    </footer>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <p>"Horary for sports betting is scary accurate. Asked about 5 games, got 4 right. The confidence percentages help me size my bets appropriately."</p>
+                    <footer>
+                        <cite>— David R.</cite>
+                        <span class="verified">✓ Verified Client</span>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="starluck-disclaimer">
+        <div class="container">
+            <div class="disclaimer-box">
+                <h4>⚠️ Important Notice</h4>
+                <p>These readings provide astrological timing guidance based on traditional electional techniques. They do not guarantee outcomes. Never gamble more than you can afford to lose. Astrology is for entertainment purposes. If you have a gambling problem, call 1-800-522-4700.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="starluck-modal" class="modal starluck-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeStarluckModal()">&times;</button>
+            <div id="starluck-modal-body">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer starluck-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="starluck.html" class="logo">
+                        <span class="logo-icon">✦</span>
+                        <span class="logo-text">StarLuck Jackpot</span>
+                    </a>
+                    <p>Cosmic timing for speculation. Not luck — alignment.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>StarLuck Services</h4>
+                    <ul>
+                        <li><a href="starluck.html">Casino Calendar</a></li>
+                        <li><a href="starluck.html">Lottery Elector</a></li>
+                        <li><a href="starluck.html">Sports Horary</a></li>
+                        <li><a href="starluck.html">Trading Elections</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Other Services</h4>
+                    <ul>
+                        <li><a href="ai-readings.html">AI Readings</a></li>
+                        <li><a href="wedding.html">Wedding & Synastry</a></li>
+                        <li><a href="gardening.html">Astro Gardening</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="booking.html">Book Premium</a></li>
+                        <li><a href="mailto:starluck@archaicastrology.com">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StarLuck Jackpot / Archaic Astrology. All rights reserved.</p>
+                <p class="disclaimer">Astrology is for entertainment purposes only. Gamble responsibly.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/starluck.js"></script>
+    <script src="js/stripe-payments.js"></script>
+</body>
+</html>
