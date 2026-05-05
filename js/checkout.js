@@ -1,57 +1,43 @@
 /**
  * Stripe Payment Links Integration
- * No backend required - uses Stripe Payment Links
+ * Live payment processing - lazycobra
  * 
- * How to set up:
- * 1. Go to https://dashboard.stripe.com/payment-links
- * 2. Create payment links for each product
- * 3. Copy the URLs below
- * 4. Replace the placeholder URLs with real ones
+ * All 31+ products connected via Stripe Payment Links
+ * Created: 2026-05-05
  */
 
-// Payment Links - Replace these with your actual Stripe Payment Link URLs
+// Payment Links - LIVE STRIPE PAYMENT LINKS
 const PAYMENT_LINKS = {
-    // AI Readings ($5-15)
-    'daily-luck': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'lucky-numbers': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'birth-snapshot': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'lucky-windows': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'horary-yesno': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'moon-phase': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    
-    // StarLuck ($15-39)
-    'casino-calendar': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'lottery-elector': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'sports-horary': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'investment-moon': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    
-    // Wedding ($29-75)
-    'the-one': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'synastry': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'fertility': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'composite': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'wedding-election': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    
-    // Gardening ($12-25)
-    'companion': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'harvest-election': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'moon-guide': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'planting-calendar': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    
-    // Financial ($75-300)
-    'trading-election': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'market-timing': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'astrota-report': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'business-launch': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'ipo-election': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'executive-horary': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'annual-strategy': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    
-    // Premium ($150-250)
-    'natal-reading': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'saturn-return': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'garden-consult': 'https://buy.stripe.com/YOUR_LINK_HERE',
-    'wedding-complete': 'https://buy.stripe.com/YOUR_LINK_HERE'
+    'daily-luck': 'https://buy.stripe.com/00w9ASgCN2c64JocGd9Ve0w',
+    'lucky-numbers': 'https://buy.stripe.com/8x228q4U5bMG6RwcGd9Ve0v',
+    'birth-snapshot': 'https://buy.stripe.com/fZucN41HTaIC1xcdKh9Ve0u',
+    'lucky-windows': 'https://buy.stripe.com/fZuaEW86heYS6RwcGd9Ve0t',
+    'horary-yesno': 'https://buy.stripe.com/3cIdR872d9Eyfo27lT9Ve0s',
+    'moon-phase': 'https://buy.stripe.com/bJe6oGeuFaICcbQ9u19Ve0r',
+    'casino-calendar': 'https://buy.stripe.com/7sY7sK5Y99EyejYdKh9Ve0q',
+    'lottery-elector': 'https://buy.stripe.com/3cI6oGfyJaIC1xceOl9Ve0p',
+    'sports-horary': 'https://buy.stripe.com/6oU4gyfyJ6sm4JofSp9Ve0o',
+    'trading-election': 'https://buy.stripe.com/dRmdR81HT5oicbQgWt9Ve08',
+    'investment-moon': 'https://buy.stripe.com/fZuaEW4U58Au6Rw0Xv9Ve0m',
+    'the-one': 'https://buy.stripe.com/00w00i0DPaICgs6fSp9Ve0l',
+    'synastry': 'https://buy.stripe.com/28E14m0DP1826RwcGd9Ve0k',
+    'fertility': 'https://buy.stripe.com/dRm4gy86h8Augs60Xv9Ve0j',
+    'composite': 'https://buy.stripe.com/3cIcN44U59Ey5NscGd9Ve0i',
+    'wedding-election': 'https://buy.stripe.com/6oU28q5Y97wq5Ns49H9Ve0h',
+    'companion': 'https://buy.stripe.com/aFa8wO3Q17wqfo249H9Ve0g',
+    'harvest-election': 'https://buy.stripe.com/28E3cu86hbMGa3IeOl9Ve0f',
+    'moon-guide': 'https://buy.stripe.com/dRmcN44U57wq1xc49H9Ve0e',
+    'planting-calendar': 'https://buy.stripe.com/14A14mfyJ9Ey6Rw6hP9Ve0d',
+    'natal-reading': 'https://buy.stripe.com/28EeVc4U52c6a3I9u19Ve0c',
+    'saturn-return': 'https://buy.stripe.com/6oUdR85Y9aIC7VA7lT9Ve0b',
+    'garden-consult': 'https://buy.stripe.com/fZu7sK4U5dUO7VAbC99Ve0a',
+    'wedding-complete': 'https://buy.stripe.com/3cIfZg86haIC0t8gWt9Ve09',
+    'market-timing': 'https://buy.stripe.com/7sY4gybiteYScbQ7lT9Ve07',
+    'astrota-report': 'https://buy.stripe.com/9B6cN472d03Yb7MbC99Ve06',
+    'business-launch': 'https://buy.stripe.com/cNi3cuaep2c67VAay59Ve05',
+    'ipo-election': 'https://buy.stripe.com/5kQ4gycmxcQKb7May59Ve04',
+    'executive-horary': 'https://buy.stripe.com/dRmaEW9al8Au4JobC99Ve03',
+    'annual-strategy': 'https://buy.stripe.com/4gM8wO1HT4ke4Jo6hP9Ve02',
 };
 
 /**
@@ -61,45 +47,19 @@ const PAYMENT_LINKS = {
 function handlePayment(serviceId) {
     const link = PAYMENT_LINKS[serviceId];
     
-    if (!link || link.includes('YOUR_LINK_HERE')) {
-        showPaymentSetupModal(serviceId);
+    if (!link) {
+        alert('Service temporarily unavailable. Please contact support.');
         return;
     }
     
-    // Redirect to Stripe Payment Link
+    // Open Stripe Payment Link in new tab
     window.open(link, '_blank');
-}
-
-/**
- * Show setup modal when payment links aren't configured
- */
-function showPaymentSetupModal(serviceId) {
-    const modal = document.createElement('div');
-    modal.className = 'payment-modal';
-    modal.innerHTML = `
-        <div class="payment-modal-backdrop" onclick="this.parentElement.remove()"></div>
-        <div class="payment-modal-content">
-            <h3>🔧 Payment Setup Required</h3>
-            <p>This service requires Stripe Payment Link configuration.</p>
-            <div class="setup-steps">
-                <p><strong>To enable payments:</strong></p>
-                <ol>
-                    <li>Go to <a href="https://dashboard.stripe.com/payment-links" target="_blank">Stripe Dashboard → Payment Links</a></li>
-                    <li>Create a payment link for: <code>${serviceId}</code></li>
-                    <li>Copy the payment link URL</li>
-                    <li>Paste it in <code>js/checkout.js</code></li>
-                </ol>
-            </div>
-            <button onclick="this.closest('.payment-modal').remove()" class="btn-close">Close</button>
-        </div>
-    `;
-    document.body.appendChild(modal);
 }
 
 // Auto-attach click handlers to payment buttons
 document.addEventListener('DOMContentLoaded', function() {
-    // Find all buttons with stripe-buy class or data-service attribute
-    const paymentButtons = document.querySelectorAll('[data-service], .stripe-buy');
+    // Find all buttons with data-service attribute
+    const paymentButtons = document.querySelectorAll('[data-service]');
     
     paymentButtons.forEach(button => {
         button.addEventListener('click', function(e) {
@@ -110,66 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    console.log('🐍 lazycobra checkout ready. ' + Object.keys(PAYMENT_LINKS).length + ' payment methods loaded.');
 });
-
-// CSS for modal
-const style = document.createElement('style');
-style.textContent = `
-    .payment-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .payment-modal-backdrop {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0,0,0,0.7);
-    }
-    .payment-modal-content {
-        position: relative;
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        max-width: 500px;
-        width: 90%;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    }
-    .payment-modal-content h3 {
-        margin-top: 0;
-        color: #1a1a1a;
-    }
-    .payment-modal-content code {
-        background: #f0f0f0;
-        padding: 0.2rem 0.5rem;
-        border-radius: 4px;
-        font-family: monospace;
-    }
-    .payment-modal-content ol {
-        padding-left: 1.5rem;
-        line-height: 1.8;
-    }
-    .payment-modal-content a {
-        color: #c9a227;
-    }
-    .btn-close {
-        background: #1a1a1a;
-        color: white;
-        border: none;
-        padding: 0.75rem 1.5rem;
-        border-radius: 6px;
-        cursor: pointer;
-        margin-top: 1rem;
-    }
-`;
-document.head.appendChild(style);
-
-console.log('🐍 lazycobra checkout loaded. Payment links needed for full functionality.');
