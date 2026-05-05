@@ -1,0 +1,584 @@
+/* Financial Astrology / AstroTA / Business Astrology Theme */
+/* Sophisticated green/gold financial aesthetic */
+
+/* CSS Variables */
+:root {
+    --primary: #1a5f3f;
+    --primary-light: #2d8a5e;
+    --primary-dark: #0d3d26;
+    --secondary: #c9a227;
+    --secondary-light: #e5c65a;
+    --secondary-dark: #9a7b1a;
+    --accent: #0f2744;
+    --accent-light: #1a3d5c;
+    --text: #1a1a1a;
+    --text-light: #4a4a4a;
+    --text-muted: #666;
+    --background: #f8faf9;
+    --surface: #ffffff;
+    --border: #e0e8e3;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --chart-bullish: #10b981;
+    --chart-bearish: #ef4444;
+    --gradient-hero: linear-gradient(135deg, #0d3d26 0%, #1a5f3f 50%, #0f2744 100%);
+    --gradient-card: linear-gradient(145deg, #ffffff 0%, #f0f7f2 100%);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-gold: 0 0 30px rgba(201, 162, 39, 0.3);
+}
+
+/* Override navbar for financial theme */
+.navbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar .logo-text {
+    color: var(--primary);
+}
+
+.navbar .nav-menu a {
+    color: var(--text);
+}
+
+.navbar .nav-menu a:hover {
+    color: var(--primary);
+}
+
+.navbar .nav-menu a.active {
+    color: var(--primary);
+}
+
+/* Hero Section - Financial Markets Aesthetic */
+.hero-financial {
+    background: var(--gradient-hero);
+    color: white;
+    padding: 8rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-financial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(201, 162, 39, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-financial .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-financial .hero-eyebrow {
+    color: var(--secondary-light);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-financial .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-financial .hero-title .accent {
+    color: var(--secondary-light);
+    font-weight: 400;
+}
+
+.hero-financial .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Chart Pattern Background */
+.chart-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    opacity: 0.1;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='40' viewBox='0 0 100 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30 L20 25 L40 35 L60 20 L80 30 L100 15' stroke='%23c9a227' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    pointer-events: none;
+}
+
+/* Market Stats Bar */
+.market-stats {
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(201, 162, 39, 0.2);
+    padding: 1rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-light);
+}
+
+.stat-change {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.stat-change.positive {
+    color: var(--chart-bullish);
+}
+
+.stat-change.negative {
+    color: var(--chart-bearish);
+}
+
+/* Section Styling */
+.section-financial {
+    padding: 5rem 0;
+}
+
+.section-financial:nth-child(even) {
+    background: var(--background);
+}
+
+/* Service Tiers */
+.tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tier-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tier-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.tier-card.featured {
+    border: 2px solid var(--secondary);
+    box-shadow: var(--shadow-gold);
+}
+
+.tier-card.featured::before {
+    background: var(--secondary);
+    height: 6px;
+}
+
+.tier-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tier-badge {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--primary-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.tier-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.tier-description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.tier-price {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.tier-price span {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.tier-price-monthly {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.tier-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.tier-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.tier-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* AstroTA Features */
+.astrota-section {
+    background: var(--accent);
+    color: white;
+    padding: 5rem 0;
+}
+
+.astrota-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.astrota-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(201, 162, 39, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.astrota-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--secondary);
+}
+
+.astrota-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.astrota-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--secondary-light);
+}
+
+.astrota-description {
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* Chart Preview */
+.chart-preview {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.chart-symbol {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.chart-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--chart-bullish);
+}
+
+.chart-indicators {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.indicator-dot.bullish {
+    background: var(--chart-bullish);
+}
+
+.indicator-dot.bearish {
+    background: var(--chart-bearish);
+}
+
+/* Business Astrology Section */
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.business-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.business-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.business-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.business-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+}
+
+.business-description {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.business-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Testimonial / Results Section */
+.results-section {
+    background: var(--gradient-hero);
+    color: white;
+    padding: 5rem 0;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(201, 162, 39, 0.3);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.result-metric {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--secondary-light);
+    margin-bottom: 0.5rem;
+}
+
+.result-label {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* CTA Section */
+.cta-financial {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-financial h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.cta-financial p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons */
+.btn-primary-financial {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+    color: var(--primary-dark);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary-financial:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gold);
+}
+
+.btn-secondary-financial {
+    display: inline-block;
+    background: transparent;
+    color: var(--secondary-light);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid var(--secondary);
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.btn-secondary-financial:hover {
+    background: var(--secondary);
+    color: var(--primary-dark);
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid var(--danger);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.disclaimer-title {
+    font-weight: 700;
+    color: var(--danger);
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer-text {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-financial {
+        padding: 6rem 0 4rem;
+    }
+    
+    .tier-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .btn-secondary-financial {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes chartPulse {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.2; }
+}
+
+.chart-pattern {
+    animation: chartPulse 4s ease-in-out infinite;
+}

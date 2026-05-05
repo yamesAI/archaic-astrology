@@ -28,7 +28,7 @@ const STRIPE_PRICES = {
     'casino-calendar': 'price_1TTj9ZB1nynXI4W9MpW11kV5',
     'lottery-elector': 'price_1TTj9ZB1nynXI4W9N1iyRrHI',
     'sports-horary': 'price_1TTj9aB1nynXI4W97jer8zk0',
-    'trading-election': 'price_1TTj9aB1nynXI4W9ATPtMRai',
+    'trading-election': 'price_1TTjpkB1nynXI4W9g2bAu2nb',  // UPDATED - Financial tier
     'investment-moon': 'price_1TTj9aB1nynXI4W9ct6k9Ga5',
     
     // Wedding Tier ($29-75)
@@ -48,7 +48,15 @@ const STRIPE_PRICES = {
     'natal-reading': 'price_1TTj9eB1nynXI4W9I0NMuC3D',
     'saturn-return': 'price_1TTj9eB1nynXI4W9Gyon0sUo',
     'garden-consult': 'price_1TTj9eB1nynXI4W979V5Jl8C',
-    'wedding-complete': 'price_1TTj9fB1nynXI4W9vsKTDx5U'
+    'wedding-complete': 'price_1TTj9fB1nynXI4W9vsKTDx5U',
+    
+    // Financial Astrology / AstroTA Tier ($75-300)
+    'market-timing': 'price_1TTjplB1nynXI4W9P9scJJrC',
+    'astrota-report': 'price_1TTjpmB1nynXI4W9VSzR1dtY',
+    'business-launch': 'price_1TTjpnB1nynXI4W9gkvUcpFE',
+    'ipo-election': 'price_1TTjpoB1nynXI4W9nvvRuT6v',
+    'executive-horary': 'price_1TTjppB1nynXI4W9XKSbW7H8',
+    'annual-strategy': 'price_1TTjpqB1nynXI4W9ZJvfmfYn'
 };
 
 // Service metadata for post-payment fulfillment
