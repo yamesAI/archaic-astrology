@@ -215,7 +215,8 @@ function openStarluckModal(type) {
             break;
             
         default:
-            content = `<h2>StarLuck Service</h2><p>This service is available for purchase.</p><button class="btn btn-primary btn-full" onclick="alert('Redirecting to payment...')">Purchase Now</button>`;
+            handlePayment(type);
+            return;
     }
     
     modalBody.innerHTML = content;

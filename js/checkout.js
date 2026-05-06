@@ -60,7 +60,7 @@ function handlePayment(serviceId) {
 document.addEventListener('DOMContentLoaded', function() {
     // Find all buttons with data-service attribute
     const paymentButtons = document.querySelectorAll('[data-service]');
-    
+
     paymentButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -70,6 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     console.log('🐍 lazycobra checkout ready. ' + Object.keys(PAYMENT_LINKS).length + ' payment methods loaded.');
 });
+
+// Bridge for modal JS files that call processPayment(serviceId, amount)
+function processPayment(serviceId) { handlePayment(serviceId); }

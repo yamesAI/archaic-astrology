@@ -367,9 +367,10 @@ function openReadingModal(type) {
             break;
             
         default:
-            content = `<h2>Coming Soon</h2><p>This reading type will be available shortly.</p>`;
+            handlePayment(type);
+            return;
     }
-    
+
     modalBody.innerHTML = content;
     modal.classList.add('active');
     

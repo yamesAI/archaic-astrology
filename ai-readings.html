@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#8B4513">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Astrology Readings | Instant Birth Chart Analysis & Daily Luck ($5)</title>
     <meta name="description" content="Get instant AI-powered astrology readings. Birth chart snapshots, daily luck scores, lucky numbers, and horary answers. Starting at just $5. Immediate delivery.">
@@ -50,10 +51,11 @@
     }
     </script>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/ai-readings.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -193,7 +195,7 @@
                         <li>✓ Astrological explanation</li>
                         <li>✓ Timing estimate</li>
                     </ul>
-                    <button class="btn btn-secondary" onclick="openReadingModal('yes-no')">
+                    <button class="btn btn-secondary" onclick="openReadingModal('horary-yesno')">
                         Ask a Question
                     </button>
                 </div>
@@ -335,6 +337,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/ai-readings.js"></script>
-    <script src="js/stripe-payments.js"></script>
+    <script src="js/checkout.js"></script>
 </body>
 </html>
