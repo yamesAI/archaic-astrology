@@ -434,10 +434,8 @@ function attachFormHandlers() {
     }
 }
 
-// Payment processing (placeholder)
-function processPayment(type, amount) {
-    alert(`Redirecting to payment for ${type} ($${amount})...\n\nIn production, this would connect to Stripe.`);
-}
+// Payment processing is handled by stripe-payments.js
+// This file no longer overrides the processPayment function
 
 // Close modal on outside click
 document.addEventListener('click', (e) => {
