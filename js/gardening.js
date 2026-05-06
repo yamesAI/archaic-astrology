@@ -144,10 +144,11 @@ function openGardeningModal(type) {
             break;
             
         default:
-            content = `<h2>Gardening Service</h2><p>Available for purchase.</p><button class="btn btn-primary btn-full" onclick="alert('Redirecting to payment...')">Purchase</button>`;
+            handlePayment(type);
+            return;
     }
-    
-    modal = modal || document.createElement('div');
+
+    if (!modal || !modalBody) return;
     modalBody.innerHTML = content;
     modal.classList.add('active');
     

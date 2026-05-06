@@ -131,7 +131,8 @@ function openWeddingModal(type) {
             break;
             
         default:
-            content = `<h2>Wedding Service</h2><p>Available for purchase. Book your consultation.</p><a href="booking.html" class="btn btn-primary btn-full">Book Now</a>`;
+            handlePayment(type);
+            return;
     }
     
     modalBody.innerHTML = content;
